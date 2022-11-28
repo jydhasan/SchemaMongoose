@@ -32,6 +32,11 @@ const reactPlaylist = new Playlist({
 });
 reactPlaylist.save();
 
+const getDocument = async () => {
+  const result = await Playlist.find();
+  console.log(result);
+}
+getDocument();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
